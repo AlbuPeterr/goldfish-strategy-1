@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 
 // DB-kapcsolat
-$mysqli = new mysqli("localhost", "root", "", "goldfish");
+$mysqli = new mysqli("localhost", "root", "", "goldfish-strategy");
 
 // Hibakezelés
 if ($mysqli->connect_error) {
