@@ -1,0 +1,461 @@
+/* ====== Alapbeállítások ====== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0a0a0a url(../img/goldfish-background.png) no-repeat center/cover;
+  color: #DED7C7;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #d4a437;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #D4A437;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #b8892c;
+}
+
+/* ====== Fejléc ====== */
+header {
+  background: #010E1B;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px #0006;
+}
+
+main {
+  padding-top: 80px;
+}
+
+/* ====== Logó ====== */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.logo {
+  width: 80px;
+  margin: 0;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #D4A437;
+  margin: 0;
+}
+
+.logo-text-span {
+  color: #FFF;
+}
+
+/* ====== Navigáció ====== */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li:last-child {
+  margin-right: 3rem;
+}
+
+nav a {
+  color: #D4A437;
+  text-decoration: none;
+}
+
+/* ====== Űrlapok ====== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #010E1B;
+}
+
+form input,
+form textarea {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #1a1d2a;
+  color: #fff;
+}
+
+form button {
+  background: #D4A437;
+  color: #000;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #c2962f;
+}
+
+/* ====== Bejelentkezés / Regisztráció ====== */
+.auth-container {
+  max-width: 400px;
+  margin: 5rem auto;
+  margin-top: 300px;
+  margin-bottom: 350px;
+  background: #111;
+  padding: 2rem;
+  border-radius: 10px;
+  color: #DED7C7;
+  background-color: #010E1B;
+  border: 1px solid #d4a437;
+}
+.form-toggle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.form-toggle button {
+  flex: 1;
+  background: #333;
+  border: none;
+  color: #DED7C7;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+/* ====== Nyelvváltó ====== */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.lang-switcher select {
+  padding: 6px 12px;
+  background-color: #1c1c1c;
+  color: #DED7C7;
+  border: 1px solid #444;
+  border-radius: 8px;
+  font-size: 14px;
+  appearance: none;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.lang-switcher select:hover {
+  background-color: #2a2a2a;
+  border-color: #D4A437;
+}
+
+.lang-switcher select:focus {
+  outline: none;
+  box-shadow: 0 0 6px #D4A437;
+}
+
+/* ====== Általános szakaszok ====== */
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.8s ease-out;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-content {
+  display: flex;
+  max-width: 1200px;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.text,
+.image {
+  flex: 1 1 500px;
+}
+
+.text h2 {
+  color: #D4A437;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.text p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px;
+}
+
+/* ====== Média lekérdezés ====== */
+@media (max-width: 768px) {
+  .section-content {
+    flex-direction: column !important;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ====== Lábjegyzet ====== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #010E1B;
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 4rem;
+}
+
+/* ====== Tracker & Portfolio panelek ====== */
+.tracker-container,
+.portfolio-container,
+.chart-container,
+.stat-card,
+.portfolio-section,
+.panel {
+  background: #010E1B;
+  border: 1px solid #D4A437;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #0003;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.panel {
+  border: none;
+}
+
+.tracker-container {
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
+.tracker-container h1,
+.tracker-container h2,
+.portfolio-section h1,
+.chart-title,
+.stat-card h3 {
+  color: #D4A437;
+  margin-bottom: 1rem;
+}
+
+.tracker-container input,
+.tracker-container select,
+.tracker-container button,
+.actions input,
+.actions select,
+.actions button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: #2a2e3e;
+  color: #fff;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.tracker-container button,
+.actions button {
+  background-color: #d4a437;
+  color: #000;
+  font-weight: 700;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.tracker-container button:hover,
+.actions button:hover {
+  background-color: #e5c76b;
+}
+
+#sellBtn {
+  background-color: #e53935;
+}
+
+#sellBtn:hover {
+  background-color: #d32f2f;
+}
+
+#balanceInfo {
+  text-align: center;
+  font-weight: 700;
+}
+
+/* ====== Portfolio táblázatok ====== */
+.portfolioTable,
+.portfolio-section table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+  background-color: #010E1B;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.portfolioTable th,
+.portfolioTable td,
+.portfolio-section table th,
+.portfolio-section table td {
+  padding: 1rem;
+  border-bottom: 2px solid #D4A437;
+}
+
+.portfolioTable th,
+.portfolio-section table th {
+  background-color: #1a1d2a;
+  color: #D4A437;
+}
+
+.portfolioTable tr:hover {
+  background-color: #2a2e3e;
+}
+
+/* ====== Chart konténerek ====== */
+#portfolioChart,
+#pieChart {
+  display: block;
+  margin: 3rem auto;
+  background-color: #010E1B;
+  border-radius: 12px;
+  padding: 1rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+.chart-container canvas {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+}
+
+/* ====== Akciós szekciók ====== */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-direction: row;
+}
+
+.action-sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.action-sections .tracker-container {
+  flex: 1 1 300px;
+  min-width: 260px;
+}
+
+/* ====== Statisztikai panelek ====== */
+.stat-card p {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ====== Admin panelek és layout ====== */
+.admin-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.top-panels,
+.bottom-panels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 3rem auto;
+}
+
+.portfolio-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  margin: 5rem auto;
+  max-width: 1400px;
+  padding: 0 1rem;
+}
+
+.left-stats,
+.right-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.center-table {
+  flex: 0 0 auto;
+}
+
+.divider{
+  border-color: #d4a437;
+  background-color: #010E1B;
+  width: 1400px;
+  border-radius: 12px;
+  padding: 4px;
+}
