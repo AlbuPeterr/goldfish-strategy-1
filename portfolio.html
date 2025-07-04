@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goldfish Strategy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/goldfish-small-logo.png">
+  <link rel="icon" type="image/x-icon" href="img/goldfish-small-logo.ico">
+  <link rel="apple-touch-icon" href="img/goldfish-small-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <a href="index.html"><img src="img/goldfish-small-logo-transparent.png" alt="Goldfish Strategy Logo" class="logo" draggable="false"></a>
+      <a href="index.html"><div class="logo-text">GOLDFISH <span class="logo-text-span">Strategy</span></div></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" data-translate="home">Home</a></li>
+        <li><a href="portfolio.html" data-translate="portfolio">Portfolio</a></li>
+        <li><a href="transaction-history.html" data-translate="transactionHistory">Transaction History</a></li>
+        <li><a href="login.html" id="loginLink" data-translate="login">Login</a></li>
+        <li><a href="register.html" id="registerLink" data-translate="register">Register</a></li>
+        <li>
+          <div class="lang-switcher">
+            <select id="langSwitcher" class="langSwitcher">
+              <option value="en">EN</option>
+              <option value="hu">HU</option>
+              <option value="de">DE</option>
+              <option value="fr">FR</option>
+            </select>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main style="margin-top: 120px;">
+    <div class="bottom-panels portfolio-grid">
+      <!-- Bal oldal: statisztikák + pie chart -->
+      <div class="left-stats">
+        <div class="stat-card">
+          <h3 data-translate="profitGrowth">Profit (Growth %)</h3>
+          <p id="summaryProfit">$0 (0%)</p>
+        </div>
+        <div class="stat-card">
+          <h3 data-translate="netWorth">Net Worth (USDC)</h3>
+          <p id="summaryCurrentValue">$0</p>
+        </div>
+        <div class="stat-card">
+          <h3 data-translate="totalInvested">Total Invested (USDC)</h3>
+          <p id="summaryInvested">$0</p>
+        </div>
+        <div class="stat-card">
+          <h2 class="chart-title" data-translate="portfolioTitle">Portfolio (%)</h2>
+          <canvas id="pieChart"></canvas>
+        </div>
+        <div class="stat-card">
+          <h2 class="chart-title" data-translate="portfolioValue">Portfolio Value</h2>
+          <canvas id="portfolioChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Jobb oldal: táblázat + chart -->
+      <div class="portfolio-section wide-section right-stats">
+        <h1 data-translate="portfolio">Portfolio</h1>
+        <p id="balanceInfo"><span data-translate="totalValue">Total Value</span>: <span id="totalValue">$0</span></p>
+        <table id="portfolioTable" ></table>
+      </div>
+  </main>
+
+  <footer data-translate="footer">
+    &copy; 2025 Péter Albu. Personal project – not financial advice.
+  </footer>
+
+  <script src="js/lang.js"></script>
+  <script src="js/portfolio-balance-chart.js"></script>
+  <script src="js/portfolio-pie-chart.js"></script>
+  <script src="js/admin-portfolio.js"></script>
+  <script src="js/header.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

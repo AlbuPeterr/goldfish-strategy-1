@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goldfish Strategy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/goldfish-small-logo.png">
+  <link rel="icon" type="image/x-icon" href="img/goldfish-small-logo.ico">
+  <link rel="apple-touch-icon" href="img/goldfish-small-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <a href="index.html"><img src="img/goldfish-small-logo-transparent.png" alt="Goldfish Strategy Logo" class="logo" draggable="false"></a>
+      <a href="index.html"><div class="logo-text">GOLDFISH <span class="logo-text-span">Strategy</span></div></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" data-translate="home">Home</a></li>
+        <li><a href="portfolio.html" data-translate="portfolio">Portfolio</a></li>
+        <li><a href="transaction-history.html" data-translate="transactionHistory">Transaction History</a></li>
+        <li><a href="login.html" id="loginLink" data-translate="login">Login</a></li>
+        <li><a href="register.html" id="registerLink" data-translate="register">Register</a></li>
+        <li>
+          <div class="lang-switcher">
+            <select id="langSwitcher" class="langSwitcher">
+              <option value="en">EN</option>
+              <option value="hu">HU</option>
+              <option value="de">DE</option>
+              <option value="fr">FR</option>
+            </select>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="auth-container">
+    <form id="registerForm">
+      <h2 data-translate="register_title">Register</h2>
+      <input type="text" name="name" data-i18n-placeholder="name" placeholder="Name" required>
+      <input type="email" name="email" data-i18n-placeholder="email" placeholder="Email" required>
+      <input type="tel" name="phone" data-i18n-placeholder="phone" placeholder="Phone Number" required>
+      <input type="password" name="password" data-i18n-placeholder="password" placeholder="Password" required>
+      <button type="submit" data-translate="register_button">Register</button>
+      <p><span data-translate="have_account">Already have an account?</span> <a href="login.html" data-translate="login_button">Login</a></p>
+    </form>
+  </div>
+  
+
+  <footer data-translate="footer">
+    &copy; 2025 Péter Albu. Personal project – not financial advice.
+  </footer>
+
+  <script src="js/lang.js"></script>
+  <script src="js/header.js" defer></script>
+  <script src="js/scroll-animation.js"></script>
+  <script src="js/register.js"></script>
+</body>
+</html>
