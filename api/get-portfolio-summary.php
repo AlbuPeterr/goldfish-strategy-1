@@ -58,3 +58,4 @@ echo json_encode([
     "profit" => round($profit, 2),
     "profit_percent" => $profitPercent
 ]);
+

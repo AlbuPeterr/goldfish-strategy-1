@@ -7,3 +7,4 @@ if ($amount > 0) {
     $conn->query("INSERT INTO transactions (coin, amount, price, type) VALUES ('usdc', $amount, 1.0, 'usdc_add')");
 }
 echo "success";
+

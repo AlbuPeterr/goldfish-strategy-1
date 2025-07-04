@@ -110,3 +110,4 @@ foreach ($data as &$row) {
 // 9. Visszaküldjük JSON formában
 header('Content-Type: application/json');
 echo json_encode($data);
+

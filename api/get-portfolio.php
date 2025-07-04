@@ -115,3 +115,4 @@ foreach ($portfolio as &$row) {
 }
 
 echo json_encode($portfolio);
+

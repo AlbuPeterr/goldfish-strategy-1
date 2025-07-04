@@ -55,3 +55,4 @@ echo json_encode([
     "total" => round($totalValue, 2),
     "breakdown" => $percentages
 ]);
+
