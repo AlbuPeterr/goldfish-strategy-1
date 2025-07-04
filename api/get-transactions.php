@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 $host = 'localhost';
-$db = 'goldfish';
+$db = 'goldfish-strategy';
 $user = 'root';
 $pass = '';
 
