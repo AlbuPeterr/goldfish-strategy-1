@@ -7,7 +7,7 @@ if (!$input) {
   exit;
 }
 
-$conn = new mysqli('localhost', 'root', '', 'goldfish');
+$conn = new mysqli('localhost', 'root', '', 'goldfish-strategy');
 if ($conn->connect_error) {
   echo json_encode(['success' => false, 'message' => 'Connection failed']);
   exit;
