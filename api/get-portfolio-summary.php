@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "goldfish");
+$conn = new mysqli("localhost", "root", "", "goldfish-strategy");
 if ($conn->connect_error) {
     die(json_encode(["error" => "Adatbázis hiba"]));
 }
