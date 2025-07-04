@@ -1,0 +1,17 @@
+{
+    "bitcoin": {
+        "usd": 109050
+    },
+    "ethereum": {
+        "usd": 2553.82
+    },
+    "solana": {
+        "usd": 150.56
+    },
+    "sui": {
+        "usd": 2.93
+    },
+    "usd-coin": {
+        "usd": 0.9999
+    }
+}
